@@ -1,0 +1,48 @@
+<div class="root">
+    <div class="navbar has-gradient">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <h1 class="app-name">{{workspace|uppercase}}</h1>
+            </div>
+        </div>
+    </div>
+    <div
+			class="board"
+			cdkDropListGroup
+			style="margin: 0vw 4vw 0vw 0vw;"
+		>
+        <div *ngFor="let board of boards;">
+            <div class="board-name">
+							<h3>{{board.title}} ({{board.issues.length}})</h3>
+							<div ngbDropdown class="d-inline-block">
+								<button class="btn" id="dropdownBasic1" ngbDropdownToggle>
+									 
+								</button>
+								<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+									<button ngbDropdownItem>Add Issue</button>
+									<button ngbDropdownItem>Delete Pipeline</button>
+								</div>
+							</div>
+						</div>
+            <div
+							class="board-bar"
+							cdkDropList
+							#todoList="cdkDropList"
+							[cdkDropListData]="board.issues"
+							(cdkDropListDropped)="drop($event)"
+						>
+                <div *ngFor="let issue of board.issues">
+                    <div
+											class="issue-container"
+											cdkDrag
+                    >
+                        <div class="issue">
+                            <h4>{{issue.title}}</h4>
+                            <p>{{issue.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
