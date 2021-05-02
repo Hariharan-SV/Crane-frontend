@@ -15,8 +15,8 @@
     margin-left: 2em;
 }
 
-.has-gradient {
-    background: #430464;
+.has-primary-bg {
+    background: #673ab7;
     color: #FFF;
 }
 
@@ -78,3 +78,8 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 4vw;
+    right: 4vw; 
+}

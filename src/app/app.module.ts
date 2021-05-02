@@ -7,8 +7,8 @@ import { WorkspaceComponent } from './pages/workspace/workspace.component';
 
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';

@@ -1,5 +1,5 @@
 <div class="root">
-    <div class="navbar has-gradient">
+    <div class="navbar has-primary-bg">
         <div class="navbar-brand">
             <div class="navbar-item">
                 <h1 class="app-name">{{workspace|uppercase}}</h1>
@@ -14,15 +14,9 @@
         <div *ngFor="let board of boards; let item = index">
             <div class="board-name">
 							<h3>{{board.title}} ({{board.issues.length}})</h3>
-							<div ngbDropdown class="d-inline-block">
-								<button class="btn" id="dropdownBasic1" ngbDropdownToggle>
-									 
-								</button>
-								<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-									<button ngbDropdownItem>Add Issue</button>
-									<button ngbDropdownItem (click)="deletePipeline(item)">Delete Pipeline</button>
-								</div>
-							</div>
+							<button mat-icon-button color="warn" (click)="deletePipeline(item)">
+								<mat-icon>delete</mat-icon>
+							</button>
 						</div>
             <div
 							class="board-bar"
@@ -45,4 +39,7 @@
             </div>
         </div>
     </div>
+		<button mat-fab color="primary" class="fixed-bottom-right">
+			<mat-icon>add</mat-icon>
+		</button>
 </div>
