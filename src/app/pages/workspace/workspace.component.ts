@@ -8,7 +8,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class WorkspaceComponent implements OnInit {
 
-	workspace: string = "Current Workspace";
+	workspace: string = "Crane Frontend";
 	boards = [
         {
             title:"To-do",
