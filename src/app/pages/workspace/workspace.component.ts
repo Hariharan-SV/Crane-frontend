@@ -59,5 +59,13 @@ export class WorkspaceComponent implements OnInit {
                         event.currentIndex);
     }
   }
+
+  deletePipeline(indexVal:Number) {
+      this.boards.forEach((element,index)=>{
+        if(index == indexVal) this.boards.splice(index,1);
+     });
+     console.log(this.boards);
+  }
+
   
 }

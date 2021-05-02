@@ -11,7 +11,7 @@
 			cdkDropListGroup
 			style="margin: 0vw 4vw 0vw 0vw;"
 		>
-        <div *ngFor="let board of boards;">
+        <div *ngFor="let board of boards; let item = index">
             <div class="board-name">
 							<h3>{{board.title}} ({{board.issues.length}})</h3>
 							<div ngbDropdown class="d-inline-block">
@@ -20,7 +20,7 @@
 								</button>
 								<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
 									<button ngbDropdownItem>Add Issue</button>
-									<button ngbDropdownItem>Delete Pipeline</button>
+									<button ngbDropdownItem (click)="deletePipeline(item)">Delete Pipeline</button>
 								</div>
 							</div>
 						</div>
