@@ -2,7 +2,7 @@
     <div class="navbar has-primary-bg">
         <div class="navbar-brand">
             <div class="navbar-item">
-                <h1 class="app-name">{{workspace|uppercase}}</h1>
+                <h1 class="app-name">{{workspace}}</h1>
             </div>
         </div>
     </div>
@@ -39,7 +39,5 @@
             </div>
         </div>
     </div>
-		<button mat-fab color="primary" class="fixed-bottom-right">
-			<mat-icon>add</mat-icon>
-		</button>
+    <app-dialog-box [formContent]="boards" ></app-dialog-box>
 </div>

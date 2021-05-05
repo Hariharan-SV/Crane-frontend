@@ -10,13 +10,23 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IssueFormComponent } from './components/issue-form/issue-form.component';
+import { FormsModule } from '@angular/forms';
+import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorkspaceComponent
+    WorkspaceComponent,
+    IssueFormComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +37,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    MatInputModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    FormsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

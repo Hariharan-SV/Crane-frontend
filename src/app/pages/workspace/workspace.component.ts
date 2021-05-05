@@ -46,6 +46,38 @@ export class WorkspaceComponent implements OnInit {
    }
 
   ngOnInit(): void {
+      this.boards = [
+        {
+            title:"To-do",
+            issues:[{
+                title: "Home Page",
+                description: "Create Home page"
+            },{
+                title: "Search Page",
+                description: "Create Search page"
+            }]
+        },
+        {
+            title:"In Progress",
+            issues:[{
+                title: "Notification Page",
+                description: "Create Notification page"
+            }]
+        },
+        {
+            title:"Icebox",
+            issues:[]
+        },
+        {
+            title:"Done",
+            issues:[
+                {
+                    title: "Profile Page",
+                    description: "Create Profile page"
+                }
+            ]
+        },
+    ];
   }
 
   drop(event: CdkDragDrop<any>) {

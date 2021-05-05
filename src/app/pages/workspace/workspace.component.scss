@@ -77,9 +77,3 @@
 .issue-container.cdk-drop-list-dragging .issue:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-
-.fixed-bottom-right {
-    position: fixed;
-    bottom: 4vw;
-    right: 4vw; 
-}

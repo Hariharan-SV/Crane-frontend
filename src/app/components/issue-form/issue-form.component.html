@@ -1,0 +1,22 @@
+<form>
+	<mat-form-field class="input-style"appearance="outline">
+		<mat-label>Select</mat-label>
+		<mat-select [(ngModel)]="pipeline" name="pipeline" class="input-style">
+            <mat-option *ngFor="let pipeline of formContent" value={{pipeline.title}} class="input-style">
+                {{pipeline.title}}
+            </mat-option>
+		</mat-select>
+	</mat-form-field>
+	<mat-form-field class="input-style" appearance="outline">
+		<mat-label>Title</mat-label>
+		<input matInput  placeholder="Issue" [(ngModel)]="issue"  type="text" name="issue"  required>
+	</mat-form-field>
+	<br>
+	<mat-form-field class="input-style" appearance="outline">
+		<mat-label>Description</mat-label>
+		<input  matInput  placeholder="Description" [(ngModel)]="description"  type="text"  name="description"  required>
+	</mat-form-field>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="submitIssue()">Save</button>
+	</div>
+</form>
