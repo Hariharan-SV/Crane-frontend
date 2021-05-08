@@ -20,13 +20,17 @@ import { IssueFormComponent } from './components/issue-form/issue-form.component
 import { FormsModule } from '@angular/forms';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
 import {MatSelectModule} from '@angular/material/select';
+import { PipelineFormComponent } from './components/pipeline-form/pipeline-form.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkspaceComponent,
     IssueFormComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    PipelineFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

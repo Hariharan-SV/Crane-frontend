@@ -1,43 +1,44 @@
 <div class="root">
-    <div class="navbar has-primary-bg">
-        <div class="navbar-brand">
-            <div class="navbar-item">
-                <h1 class="app-name">{{workspace}}</h1>
-            </div>
-        </div>
-    </div>
-    <div
-			class="board"
-			cdkDropListGroup
-			style="margin: 0vw 4vw 0vw 0vw;"
-		>
-        <div *ngFor="let board of boards; let item = index">
-            <div class="board-name">
-							<h3>{{board.title}} ({{board.issues.length}})</h3>
-							<button mat-icon-button color="warn" (click)="deletePipeline(item)">
-								<mat-icon>delete</mat-icon>
-							</button>
+	<div class="navbar has-primary-bg">
+		<div class="navbar-brand">
+			<div class="navbar-item">
+				<h1 class="app-name">{{workspace}}</h1>
+			</div>
+		</div>
+	</div>
+	<app-pipeline-form [boards]="boards"></app-pipeline-form>
+	<div
+		class="board"
+		cdkDropListGroup
+		style="margin: 0vw 4vw 0vw 0vw;"
+	>
+		<div *ngFor="let board of boards; let item = index">
+			<div class="board-name">
+					<h3>{{board.title}} ({{board.issues.length}})</h3>
+					<button mat-icon-button color="warn" (click)="deletePipeline(item)">
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
+			<div
+				class="board-bar"
+				cdkDropList
+				#todoList="cdkDropList"
+				[cdkDropListData]="board.issues"
+				(cdkDropListDropped)="drop($event)"
+			>
+				<div *ngFor="let issue of board.issues">
+					<div
+						class="issue-container"
+						cdkDrag
+					>
+						<div class="issue">
+							<h4>{{issue.title}}</h4>
+							<p>{{issue.description}}</p>
 						</div>
-            <div
-							class="board-bar"
-							cdkDropList
-							#todoList="cdkDropList"
-							[cdkDropListData]="board.issues"
-							(cdkDropListDropped)="drop($event)"
-						>
-                <div *ngFor="let issue of board.issues">
-                    <div
-											class="issue-container"
-											cdkDrag
-                    >
-                        <div class="issue">
-                            <h4>{{issue.title}}</h4>
-                            <p>{{issue.description}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <app-dialog-box [formContent]="boards" ></app-dialog-box>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<app-dialog-box [formContent]="boards"></app-dialog-box>
 </div>

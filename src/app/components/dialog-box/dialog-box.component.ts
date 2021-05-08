@@ -12,8 +12,9 @@ export class DialogBoxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  closeResult = '';
-  dialogRef: any;
+  closeResult:string = '';
+  title:string = '';
+  @Input() dialogRef: any;
   @Input() formContent: object;
   
   constructor(public dialog: MatDialog) {

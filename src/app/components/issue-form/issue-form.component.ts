@@ -23,7 +23,6 @@ export class IssueFormComponent implements OnInit {
   }
 
 	submitIssue() {
-		console.log(this.issue,this.description);
 		let index = this.formContent.findIndex((x:any )=> x.title === this.pipeline);
 		this.formContent[index]["issues"].push({"title":this.issue,"description":this.description});
 		this.afterSubmit.close();
