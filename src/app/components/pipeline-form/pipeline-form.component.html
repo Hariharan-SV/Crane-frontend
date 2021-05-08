@@ -1,0 +1,5 @@
+<mat-form-field class="input-style" appearance="standard">
+    <mat-label>New Pipeline</mat-label>
+    <input matInput  placeholder="Add New Pipeline" [(ngModel)]="pipeline"  type="text" name="pipeline"  required>
+</mat-form-field>
+<button mat-flat-button color="primary" class="font-style" (click)="submitPipeline()">Add</button>
