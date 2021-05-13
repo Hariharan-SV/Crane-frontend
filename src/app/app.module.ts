@@ -22,6 +22,8 @@ import { DialogBoxComponent } from './components/dialog-box/dialog-box.component
 import {MatSelectModule} from '@angular/material/select';
 import { PipelineFormComponent } from './components/pipeline-form/pipeline-form.component';
 import { HomeComponent } from './pages/home/home.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { HomeComponent } from './pages/home/home.component';
     MatDialogModule,
     FormsModule,
     MatSelectModule,
+    MatSnackBarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
