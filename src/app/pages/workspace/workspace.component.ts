@@ -6,6 +6,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
   templateUrl: './workspace.component.html',
   styleUrls: ['./workspace.component.scss']
 })
+
 export class WorkspaceComponent implements OnInit {
 
 	workspace: string = "Crane Frontend";
@@ -97,7 +98,26 @@ export class WorkspaceComponent implements OnInit {
 		if(index == indexVal) this.boards.splice(index,1);
 	 });
 	 console.log(this.boards);
-  }
-
-  
+  }  
 }
+
+/*
+@Component({
+  selector: 'app-workspace',
+  templateUrl: './workspace.component.html',
+  styleUrls: ['./workspace.component.scss']
+})
+
+export class SnackBar implements OnInit {
+	constructor(private _snackBar: MatSnackBar) {
+	}
+
+	ngOnInit() {
+
+	}
+
+	openSnackBar() {
+    this._snackBar.open("Name already exists ! Cannot create a pipeline ! ");
+  }
+}
+*/
